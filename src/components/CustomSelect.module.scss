@@ -1,0 +1,70 @@
+.customSelectWrapper {
+  position: relative;
+
+  .select {
+    width: 366px;
+    height: 20px;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    background-image: url(../assets/Icon.png);
+    background-position-y: center;
+    background-position-x: calc(100% - 11px);
+    background-repeat: no-repeat;
+    margin-bottom: 8px;
+    padding: 16px;
+    font-size: 16px;
+    color: #7C9CBF;
+    line-height: 21px;
+    border: 1px solid #DBE2EA;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    box-sizing: content-box;
+
+    .selectLang {
+      color: #2C2738;
+    }
+  }
+
+  .selectOpen {
+    padding: 15px;
+    border: 2px solid #0880AE;
+    background-position-x: calc(100% - 10px);
+  }
+
+  .optionWrapper {
+    position: absolute;
+    top: 56px;
+    z-index: 100;
+    border: 1px solid #DBE2EA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04), 0px 20px 20px rgba(44, 39, 56, 0.04);
+    border-radius: 6px;
+    background: #FFFFFF;
+    padding: 12px 0;
+    list-style: none;
+
+    .option {
+      width: 398px;
+      padding: 12px 15px;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      background-color: #EBF4F8;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .customSelectWrapper {
+    .select {
+      width: calc(100% - 32px);
+    }
+    .optionWrapper{
+      width: 100%;
+
+      .option {
+        width: 100%;
+      }
+    }
+  }
+}
