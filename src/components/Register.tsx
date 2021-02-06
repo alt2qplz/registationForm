@@ -75,16 +75,6 @@ export const Register: React.FC = () => {
                   <Field name="phone" placeholder='Введите ваш телефон'/>
                   <div className={cn(style.error)}><ErrorMessage name="phone" component="p"/></div>
 
-                  {/**/}
-                  {/*<Field name="lang"  className={cn(style.select)} >*/}
-                  {/*  <option value="" style={{ display: 'none' }} defaultChecked={true}>Язык</option>*/}
-                  {/*  {languages.map(lang => {*/}
-                  {/*    return <option key={lang.name} value={lang.name} className={cn(style.option)}>*/}
-                  {/*      {lang.ruName}*/}
-                  {/*    </option>*/}
-                  {/*  })}*/}
-                  {/*</Field>*/}
-                  {/**/}
 
                   <label htmlFor="lang" className={cn(style.fieldName)}>Язык</label>
                   <Field
@@ -98,6 +88,17 @@ export const Register: React.FC = () => {
                   <div className={cn(style.error)}><ErrorMessage name="lang" component="p"/></div>
 
 
+                  {/*// <Field name="lang" className={cn(style.select)}>*/}
+                  {/*// <option value="" style={{ display: 'none' }} defaultChecked={true}>Язык</option>*/}
+                  {/*// {languages.map(lang => {*/}
+                  {/*//   return <option*/}
+                  {/*//     key={lang.value}*/}
+                  {/*//     value={lang.label}*/}
+                  {/*//     // className={cn(style.option)}*/}
+                  {/*//   >*/}
+                  {/*//     {lang.label}*/}
+                  {/*//   </option>*/}
+                  {/*//   </Field>}*/}
 
                   <div className={cn(style.checkBoxWrap)}>
                     <Field type="checkbox" name="check" id="check" className={cn(style.customCheckbox)}/>
@@ -112,11 +113,11 @@ export const Register: React.FC = () => {
                     Зарегистрироваться
                   </button>
                 </Form>
-              )
-            }}
-          </Formik>
-        </div>
-      </div>
-    </div>
-  )
-}
+                )
+                }}
+                </Formik>
+                </div>
+            </div>
+            </div>
+            )
+            }

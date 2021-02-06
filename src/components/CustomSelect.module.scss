@@ -18,6 +18,7 @@
     border: 1px solid #DBE2EA;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
     box-sizing: content-box;
+    cursor: pointer;
 
     .selectLang {
       color: #2C2738;
@@ -60,7 +61,9 @@
       width: calc(100% - 32px);
     }
     .optionWrapper{
+      position: relative;
       width: 100%;
+      top: 0px;
 
       .option {
         width: 100%;

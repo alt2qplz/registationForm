@@ -26,12 +26,12 @@ export const CustomSelect: React.FC<PropsType> = ({ languages, setFieldValue }) 
     <div className={cn(style.customSelectWrapper)}>
       <div
         className={selectOpen ? cn(style.select, style.selectOpen) : cn(style.select)}
-        onClick={() => setSelectOpen(true)}
+        onClick={() => setSelectOpen(!selectOpen)}
       >
         <p className={selectLang ? cn(style.selectLang) : ''}>{selectLang ? selectLang.label : 'Выберите язык'}</p>
       </div>
       {selectOpen
-        ? <ul className={cn(style.optionWrapper)} onPointerLeave={nonChooseHandler}>
+        ? <ul className={cn(style.optionWrapper)} onPointerLeave={() => setSelectOpen(false)}>
           {languages.map(lang => {
             return <li key={lang.value}
                        className={cn(style.option)}
